@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahmoud Azmy | Deputy IT Director</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066ff'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='18' font-weight='700' fill='%23fff'%3EMA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="nav__logo">MA</a>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-sun"></i></button>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#home" class="nav__link">Home</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#certificates" class="nav__link">Certificates</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#services" class="nav__link">Expertise</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home -->
+  <section class="hero" id="home">
+    <canvas id="particlesCanvas"></canvas>
+    <div class="container hero__inner">
+      <p class="hero__label">Deputy Director of Information Technology</p>
+      <h1 class="hero__title">Mahmoud<br>Azmy</h1>
+      <p class="hero__desc">Work in a situation where time pressure is prevalent and attention to details is very important. Responsible for exhibiting excellent customer service skills, a great ability to communicate clearly.</p>
+      <div class="hero__actions">
+        <a href="#experience" class="btn btn--primary">View Experience</a>
+        <a href="#contact" class="btn btn--outline">Get in Touch</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat"><span class="stat__num">16+</span><span class="stat__label">Years Exp.</span></div>
+        <div class="stat"><span class="stat__num">7+</span><span class="stat__label">Certifications</span></div>
+        <div class="stat"><span class="stat__num">3</span><span class="stat__label">Roles</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Timeline -->
+  <section class="section section--dark" id="experience">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__tag">Career</p>
+        <h2 class="section__title">Work Experience</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">2019 – 2025</span>
+            <h3 class="timeline__title">Deputy Director of Information Technology</h3>
+            <p class="timeline__org">King Mariot Higher Institute</p>
+            <p class="timeline__desc">Managing the department operations. Strategic planning 1–2 years ahead to decide when the company needs to upgrade its technology. Mentoring junior technicians and handling high-pressure system failures calmly.</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">2016 – 2019</span>
+            <h3 class="timeline__title">IT Supervisor</h3>
+            <p class="timeline__org">EAAC Group for Training &amp; Consultancy</p>
+            <p class="timeline__desc">Managing a small team. Deep knowledge of networking (TCP/IP), virtualization, and operating systems (Windows/Linux). Translating "tech-speak" into simple language.</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">2010 – 2016</span>
+            <h3 class="timeline__title">Computer Teacher / IT Technician</h3>
+            <p class="timeline__org">Braeem Tibahh Language School</p>
+            <p class="timeline__desc">Entry level IT support. Familiarity with Python, HTML/CSS, and Scratch for younger levels. Deep knowledge of OS (Windows/Mac/Linux), Microsoft Office, and G-Suite.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section class="section" id="certificates">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__tag">Credentials</p>
+        <h2 class="section__title">Certificates &amp; Training</h2>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card">
+          <div class="cert-card__icon"><i class="fas fa-network-wired"></i></div>
+          <h3 class="cert-card__title">CCNA</h3>
+          <p class="cert-card__desc">Routing &amp; Switching Certification Training – New Horizons</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-card__icon"><i class="fas fa-server"></i></div>
+          <h3 class="cert-card__title">MCITP &amp; MCSA</h3>
+          <p class="cert-card__desc">Server Self Study – Microsoft Certified IT Professional &amp; Server Administrator</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-card__icon"><i class="fas fa-code"></i></div>
+          <h3 class="cert-card__title">Front-End Developer</h3>
+          <p class="cert-card__desc">Root Academy – Certified Front-End Developer</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-card__icon"><i class="fas fa-chalkboard-teacher"></i></div>
+          <h3 class="cert-card__title">Professional Teacher Leader</h3>
+          <p class="cert-card__desc">Canadian Academy – Certificate of Professional Teacher Leadership</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-card__icon"><i class="fas fa-paint-brush"></i></div>
+          <h3 class="cert-card__title">Visual Design</h3>
+          <p class="cert-card__desc">Professional certificate in visual design principles and applications</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-card__icon"><i class="fas fa-shield-alt"></i></div>
+          <h3 class="cert-card__title">Firewall &amp; Help Desk</h3>
+          <p class="cert-card__desc">Certified in firewall administration and help-disk management</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-card__icon"><i class="fas fa-robot"></i></div>
+          <h3 class="cert-card__title">AI Tools</h3>
+          <p class="cert-card__desc">Certified in artificial intelligence tools and applications</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-card__icon"><i class="fas fa-laptop-code"></i></div>
+          <h3 class="cert-card__title">Network Administrator</h3>
+          <p class="cert-card__desc">MCSA – MCITP – CCNA certified network administrator</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section section--dark" id="about">
+    <div class="container">
+      <div class="about">
+        <div class="about__image">
+          <div class="about__image-frame">
+            <img src="./img/1.png" alt="Mahmoud Azmy">
+          </div>
+        </div>
+        <div class="about__content">
+          <div class="section__head">
+            <p class="section__tag">About Me</p>
+            <h2 class="section__title">IT leadership with<br>a technical foundation.</h2>
+          </div>
+          <p class="about__text">I'm an IT professional with 16+ years of experience spanning technical support, systems administration, network management, and IT leadership. My career has taken me from hands-on troubleshooting to managing full department operations.</p>
+          <p class="about__text">I hold a degree from the Faculty of Computers, Information and Artificial Intelligence, and have earned multiple industry certifications including CCNA, MCITP, and MCSA. I combine deep technical knowledge with strong communication skills — translating complex tech concepts into clear language for all audiences.</p>
+          <div class="about__details">
+            <div class="about__detail">
+              <span class="about__detail-label">Education</span>
+              <span class="about__detail-value">Faculty of Computers, Information and Artificial Intelligence (2005–2009)</span>
+            </div>
+            <div class="about__detail">
+              <span class="about__detail-label">Language</span>
+              <span class="about__detail-value">English – Very good written and spoken</span>
+            </div>
+            <div class="about__detail">
+              <span class="about__detail-label">Location</span>
+              <span class="about__detail-value">Alexandria, Egypt</span>
+            </div>
+          </div>
+          <div class="about__skills">
+            <div class="skill"><span class="skill__name">Network Admin (TCP/IP, Routing)</span><div class="skill__bar"><div class="skill__fill" style="width:95%"></div></div></div>
+            <div class="skill"><span class="skill__name">Windows / Linux Server</span><div class="skill__bar"><div class="skill__fill" style="width:90%"></div></div></div>
+            <div class="skill"><span class="skill__name">Virtualization</span><div class="skill__bar"><div class="skill__fill" style="width:88%"></div></div></div>
+            <div class="skill"><span class="skill__name">HTML / CSS / Python</span><div class="skill__bar"><div class="skill__fill" style="width:85%"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services / Expertise -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__tag">Expertise</p>
+        <h2 class="section__title">Core Competencies</h2>
+      </div>
+      <div class="services">
+        <div class="service">
+          <div class="service__icon"><i class="fas fa-network-wired"></i></div>
+          <h3 class="service__title">Networking</h3>
+          <p class="service__desc">Strong knowledge of TCP/IP, routing, switching, and network infrastructure design and troubleshooting.</p>
+        </div>
+        <div class="service">
+          <div class="service__icon"><i class="fas fa-server"></i></div>
+          <h3 class="service__title">Systems Administration</h3>
+          <p class="service__desc">Deep expertise in Windows Server, Linux, virtualization, and enterprise system management.</p>
+        </div>
+        <div class="service">
+          <div class="service__icon"><i class="fas fa-shield-alt"></i></div>
+          <h3 class="service__title">IT Security</h3>
+          <p class="service__desc">Firewall administration, security best practices, and protecting organizational infrastructure.</p>
+        </div>
+        <div class="service">
+          <div class="service__icon"><i class="fas fa-users-cog"></i></div>
+          <h3 class="service__title">IT Leadership</h3>
+          <p class="service__desc">Managing teams, strategic technology planning, vendor management, and departmental operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section--dark" id="contact">
+    <div class="container">
+      <div class="section__head">
+        <p class="section__tag">Contact</p>
+        <h2 class="section__title">Let's Connect</h2>
+      </div>
+      <div class="contact">
+        <form class="contact__form" id="contactForm">
+          <div class="contact__row">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <input type="text" placeholder="Subject">
+          <textarea rows="5" placeholder="Your message..." required></textarea>
+          <button type="submit" class="btn btn--primary btn--lg">Send Message <i class="fas fa-paper-plane"></i></button>
+        </form>
+        <div class="contact__info">
+          <div class="contact__item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:mahmoudazmy2050@gmail.com">mahmoudazmy2050@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact__item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+201274316731">0127-431-6731</a>
+            </div>
+          </div>
+          <div class="contact__item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Address</strong>
+              <span>Alexandria – Abo-Kir, Tosson</span>
+            </div>
+          </div>
+          <div class="contact__social">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:mahmoudazmy2050@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Mahmoud Azmy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
