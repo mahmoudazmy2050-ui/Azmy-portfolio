@@ -1,276 +1,738 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mahmoud Azmy | Deputy IT Director</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230066ff'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='18' font-weight='700' fill='%23fff'%3EMA%3C/text%3E%3C/svg%3E">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAHMOUD AZMY — Deputy Director of IT | Portfolio</title>
+  <meta name="description" content="Portfolio of Mahmoud Azmy, Deputy Director of Information Technology Department — Networking, Systems Administration, Leadership & Front-end Development." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Scan line overlay -->
+  <div class="scanline-overlay"></div>
+
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
 
   <!-- Navigation -->
-  <nav class="nav" id="nav">
-    <div class="container nav__inner">
-      <a href="#home" class="nav__logo">MA</a>
-      <div class="nav__actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-sun"></i></button>
-        <button class="nav__toggle" id="navToggle" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-      <ul class="nav__menu" id="navMenu">
-        <li><a href="#home" class="nav__link">Home</a></li>
-        <li><a href="#experience" class="nav__link">Experience</a></li>
-        <li><a href="#certificates" class="nav__link">Certificates</a></li>
-        <li><a href="#about" class="nav__link">About</a></li>
-        <li><a href="#services" class="nav__link">Expertise</a></li>
-        <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
-      </ul>
+  <nav class="nav" id="mainNav">
+    <div class="nav__logo">
+      <span class="nav__logo-icon">◆</span>
+      <span class="nav__logo-text">MAHMOUD<span class="accent">AZMY</span></span>
     </div>
+    <div class="nav__links">
+      <a href="#hero" class="nav__link active" data-section="hero">HOME</a>
+      <a href="#about" class="nav__link" data-section="about">PROFILE</a>
+      <a href="#cases" class="nav__link" data-section="cases">MISSIONS</a>
+      <a href="#stats" class="nav__link" data-section="stats">STATS</a>
+      <a href="#certifications" class="nav__link" data-section="certifications">CERTS</a>
+      <a href="#contact" class="nav__link" data-section="contact">UPLINK</a>
+    </div>
+    <div class="nav__status">
+      <span class="nav__status-dot"></span>
+      <span class="nav__status-text">SYSTEM ONLINE</span>
+    </div>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle Menu">
+      <span class="nav__toggle-line"></span>
+      <span class="nav__toggle-line"></span>
+      <span class="nav__toggle-line"></span>
+    </button>
   </nav>
 
-  <!-- Home -->
-  <section class="hero" id="home">
-    <canvas id="particlesCanvas"></canvas>
-    <div class="container hero__inner">
-      <p class="hero__label">Deputy Director of Information Technology</p>
-      <h1 class="hero__title">Mahmoud<br>Azmy</h1>
-      <p class="hero__desc">Work in a situation where time pressure is prevalent and attention to details is very important. Responsible for exhibiting excellent customer service skills, a great ability to communicate clearly.</p>
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <canvas class="hero__particles" id="particleCanvas"></canvas>
+    <div class="hero__grid-overlay"></div>
+    <div class="hero__container">
+      <div class="hero__content">
+      <div class="hero__badge">
+        <span class="hero__badge-line"></span>
+        <span class="hero__badge-text">DEPUTY IT DIRECTOR // TECH LEAD</span>
+        <span class="hero__badge-line"></span>
+      </div>
+      <h1 class="hero__title">
+        <span class="hero__title-line hero__title-line--1">MAHMOUD</span>
+        <span class="hero__title-line hero__title-line--2">AZMY<span class="accent blink">_</span></span>
+        <span class="hero__title-line hero__title-line--3">BUILDING <span class="accent">SYSTEMS</span></span>
+      </h1>
+      <p class="hero__subtitle">Deputy Director of Information Technology with 15+ years of expertise in networking, systems administration, team leadership, and strategic IT planning. Thriving under pressure, delivering excellence.</p>
       <div class="hero__actions">
-        <a href="#experience" class="btn btn--primary">View Experience</a>
-        <a href="#contact" class="btn btn--outline">Get in Touch</a>
+        <a href="#cases" class="btn btn--primary">
+          <span class="btn__icon">▶</span>
+          <span class="btn__text">VIEW MISSIONS</span>
+          <span class="btn__glow"></span>
+        </a>
+        <a href="#contact" class="btn btn--outline">
+          <span class="btn__text">OPEN UPLINK</span>
+        </a>
       </div>
-      <div class="hero__stats">
-        <div class="stat"><span class="stat__num">16+</span><span class="stat__label">Years Exp.</span></div>
-        <div class="stat"><span class="stat__num">7+</span><span class="stat__label">Certifications</span></div>
-        <div class="stat"><span class="stat__num">3</span><span class="stat__label">Roles</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Timeline -->
-  <section class="section section--dark" id="experience">
-    <div class="container">
-      <div class="section__head">
-        <p class="section__tag">Career</p>
-        <h2 class="section__title">Work Experience</h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__content">
-            <span class="timeline__date">2019 – 2025</span>
-            <h3 class="timeline__title">Deputy Director of Information Technology</h3>
-            <p class="timeline__org">King Mariot Higher Institute</p>
-            <p class="timeline__desc">Managing the department operations. Strategic planning 1–2 years ahead to decide when the company needs to upgrade its technology. Mentoring junior technicians and handling high-pressure system failures calmly.</p>
-          </div>
+      <div class="hero__hud">
+        <div class="hero__hud-item">
+          <span class="hero__hud-label">YEARS ACTIVE</span>
+          <span class="hero__hud-value" data-count="15">0</span>
         </div>
-        <div class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__content">
-            <span class="timeline__date">2016 – 2019</span>
-            <h3 class="timeline__title">IT Supervisor</h3>
-            <p class="timeline__org">EAAC Group for Training &amp; Consultancy</p>
-            <p class="timeline__desc">Managing a small team. Deep knowledge of networking (TCP/IP), virtualization, and operating systems (Windows/Linux). Translating "tech-speak" into simple language.</p>
-          </div>
+        <div class="hero__hud-divider"></div>
+        <div class="hero__hud-item">
+          <span class="hero__hud-label">CERTIFICATIONS</span>
+          <span class="hero__hud-value" data-count="8">0</span>
         </div>
-        <div class="timeline__item">
-          <div class="timeline__dot"></div>
-          <div class="timeline__content">
-            <span class="timeline__date">2010 – 2016</span>
-            <h3 class="timeline__title">Computer Teacher / IT Technician</h3>
-            <p class="timeline__org">Braeem Tibahh Language School</p>
-            <p class="timeline__desc">Entry level IT support. Familiarity with Python, HTML/CSS, and Scratch for younger levels. Deep knowledge of OS (Windows/Mac/Linux), Microsoft Office, and G-Suite.</p>
-          </div>
+        <div class="hero__hud-divider"></div>
+        <div class="hero__hud-item">
+          <span class="hero__hud-label">ROLES HELD</span>
+          <span class="hero__hud-value" data-count="4">0</span>
+        </div>
+      </div>
+      <br>
+      <div class="hero__profile-wrapper">
+        <div class="hero__profile-frame">
+          <img src="profile.png" alt="Mahmoud Azmy" class="hero__profile-img" />
+          <div class="hero__profile-overlay"></div>
+          <div class="hero__profile-scanline"></div>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Certificates -->
-  <section class="section" id="certificates">
-    <div class="container">
-      <div class="section__head">
-        <p class="section__tag">Credentials</p>
-        <h2 class="section__title">Certificates &amp; Training</h2>
-      </div>
-      <div class="certs-grid">
-        <div class="cert-card">
-          <div class="cert-card__icon"><i class="fas fa-network-wired"></i></div>
-          <h3 class="cert-card__title">CCNA</h3>
-          <p class="cert-card__desc">Routing &amp; Switching Certification Training – New Horizons</p>
-        </div>
-        <div class="cert-card">
-          <div class="cert-card__icon"><i class="fas fa-server"></i></div>
-          <h3 class="cert-card__title">MCITP &amp; MCSA</h3>
-          <p class="cert-card__desc">Server Self Study – Microsoft Certified IT Professional &amp; Server Administrator</p>
-        </div>
-        <div class="cert-card">
-          <div class="cert-card__icon"><i class="fas fa-code"></i></div>
-          <h3 class="cert-card__title">Front-End Developer</h3>
-          <p class="cert-card__desc">Root Academy – Certified Front-End Developer</p>
-        </div>
-        <div class="cert-card">
-          <div class="cert-card__icon"><i class="fas fa-chalkboard-teacher"></i></div>
-          <h3 class="cert-card__title">Professional Teacher Leader</h3>
-          <p class="cert-card__desc">Canadian Academy – Certificate of Professional Teacher Leadership</p>
-        </div>
-        <div class="cert-card">
-          <div class="cert-card__icon"><i class="fas fa-paint-brush"></i></div>
-          <h3 class="cert-card__title">Visual Design</h3>
-          <p class="cert-card__desc">Professional certificate in visual design principles and applications</p>
-        </div>
-        <div class="cert-card">
-          <div class="cert-card__icon"><i class="fas fa-shield-alt"></i></div>
-          <h3 class="cert-card__title">Firewall &amp; Help Desk</h3>
-          <p class="cert-card__desc">Certified in firewall administration and help-disk management</p>
-        </div>
-        <div class="cert-card">
-          <div class="cert-card__icon"><i class="fas fa-robot"></i></div>
-          <h3 class="cert-card__title">AI Tools</h3>
-          <p class="cert-card__desc">Certified in artificial intelligence tools and applications</p>
-        </div>
-        <div class="cert-card">
-          <div class="cert-card__icon"><i class="fas fa-laptop-code"></i></div>
-          <h3 class="cert-card__title">Network Administrator</h3>
-          <p class="cert-card__desc">MCSA – MCITP – CCNA certified network administrator</p>
-        </div>
-      </div>
+          <div class="hero__scroll-indicator">
+      <div class="hero__scroll-line"></div>
+    
     </div>
   </section>
 
-  <!-- About -->
-  <section class="section section--dark" id="about">
-    <div class="container">
-      <div class="about">
-        <div class="about__image">
-          <div class="about__image-frame">
-            <img src="./img/1.png" alt="Mahmoud Azmy">
+  <!-- About / Profile Section -->
+  <section class="about" id="about">
+    <div class="section-header">
+      <span class="section-header__tag">// 01</span>
+      <h2 class="section-header__title">OPERATIVE <span class="accent">PROFILE</span></h2>
+      <div class="section-header__line"></div>
+    </div>
+    <div class="about__content">
+      <div class="about__card about__card--bio">
+        <div class="about__card-header">
+          <span class="about__card-icon">⬡</span>
+          <span class="about__card-title">BIO.SYS</span>
+          <span class="about__card-status">● ACTIVE</span>
+        </div>
+        <div class="about__card-body">
+          <p>I'm Mahmoud Azmy — Deputy Director of Information Technology with a career built on precision, leadership, and relentless problem-solving. I thrive in high-pressure environments where attention to detail is paramount.</p>
+          <p>From hands-on technical support to managing entire IT departments, I bring excellent customer service skills and the ability to communicate complex technical concepts in simple, clear language. My mission: keep systems running, teams growing, and technology evolving.</p>
+        </div>
+      </div>
+      <div class="about__card about__card--skills">
+        <div class="about__card-header">
+          <span class="about__card-icon">◈</span>
+          <span class="about__card-title">SKILL.MATRIX</span>
+          <span class="about__card-status">● LOADED</span>
+        </div>
+        <div class="about__card-body">
+          <div class="skill-bar">
+            <div class="skill-bar__header">
+              <span class="skill-bar__name">NETWORKING (TCP/IP)</span>
+              <span class="skill-bar__value">95%</span>
+            </div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" data-width="95"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__header">
+              <span class="skill-bar__name">SYSTEMS ADMIN (WIN/LINUX)</span>
+              <span class="skill-bar__value">92%</span>
+            </div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" data-width="92"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__header">
+              <span class="skill-bar__name">TEAM LEADERSHIP</span>
+              <span class="skill-bar__value">96%</span>
+            </div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" data-width="96"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__header">
+              <span class="skill-bar__name">STRATEGIC IT PLANNING</span>
+              <span class="skill-bar__value">90%</span>
+            </div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__header">
+              <span class="skill-bar__name">FRONT-END DEVELOPMENT</span>
+              <span class="skill-bar__value">85%</span>
+            </div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__header">
+              <span class="skill-bar__name">VIRTUALIZATION</span>
+              <span class="skill-bar__value">88%</span>
+            </div>
+            <div class="skill-bar__track"><div class="skill-bar__fill" data-width="88"></div></div>
           </div>
         </div>
-        <div class="about__content">
-          <div class="section__head">
-            <p class="section__tag">About Me</p>
-            <h2 class="section__title">IT leadership with<br>a technical foundation.</h2>
-          </div>
-          <p class="about__text">I'm an IT professional with 16+ years of experience spanning technical support, systems administration, network management, and IT leadership. My career has taken me from hands-on troubleshooting to managing full department operations.</p>
-          <p class="about__text">I hold a degree from the Faculty of Computers, Information and Artificial Intelligence, and have earned multiple industry certifications including CCNA, MCITP, and MCSA. I combine deep technical knowledge with strong communication skills — translating complex tech concepts into clear language for all audiences.</p>
-          <div class="about__details">
-            <div class="about__detail">
-              <span class="about__detail-label">Education</span>
-              <span class="about__detail-value">Faculty of Computers, Information and Artificial Intelligence (2005–2009)</span>
-            </div>
-            <div class="about__detail">
-              <span class="about__detail-label">Language</span>
-              <span class="about__detail-value">English – Very good written and spoken</span>
-            </div>
-            <div class="about__detail">
-              <span class="about__detail-label">Location</span>
-              <span class="about__detail-value">Alexandria, Egypt</span>
-            </div>
-          </div>
-          <div class="about__skills">
-            <div class="skill"><span class="skill__name">Network Admin (TCP/IP, Routing)</span><div class="skill__bar"><div class="skill__fill" style="width:95%"></div></div></div>
-            <div class="skill"><span class="skill__name">Windows / Linux Server</span><div class="skill__bar"><div class="skill__fill" style="width:90%"></div></div></div>
-            <div class="skill"><span class="skill__name">Virtualization</span><div class="skill__bar"><div class="skill__fill" style="width:88%"></div></div></div>
-            <div class="skill"><span class="skill__name">HTML / CSS / Python</span><div class="skill__bar"><div class="skill__fill" style="width:85%"></div></div></div>
+      </div>
+      <div class="about__card about__card--tools">
+        <div class="about__card-header">
+          <span class="about__card-icon">⬢</span>
+          <span class="about__card-title">ARSENAL.DAT</span>
+          <span class="about__card-status">● READY</span>
+        </div>
+        <div class="about__card-body">
+          <div class="tool-grid">
+            <div class="tool-grid__item">Windows Server</div>
+            <div class="tool-grid__item">Linux</div>
+            <div class="tool-grid__item">Python</div>
+            <div class="tool-grid__item">HTML / CSS</div>
+            <div class="tool-grid__item">Microsoft Office</div>
+            <div class="tool-grid__item">G-Suite</div>
+            <div class="tool-grid__item">Cisco IOS</div>
+            <div class="tool-grid__item">Active Directory</div>
+            <div class="tool-grid__item">Firewall Config</div>
+            <div class="tool-grid__item">Help Desk Systems</div>
+            <div class="tool-grid__item">AI Tools</div>
+            <div class="tool-grid__item">Virtualization</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services / Expertise -->
-  <section class="section" id="services">
-    <div class="container">
-      <div class="section__head">
-        <p class="section__tag">Expertise</p>
-        <h2 class="section__title">Core Competencies</h2>
+  <!-- Case Studies / Missions -->
+  <section class="cases" id="cases">
+    <div class="section-header">
+      <span class="section-header__tag">// 02</span>
+      <h2 class="section-header__title">MISSION <span class="accent">LOG</span></h2>
+      <div class="section-header__line"></div>
+    </div>
+    <div class="cases__grid">
+
+      <!-- Mission 1: Computer Teacher -->
+      <div class="case-card" data-level="1" data-status="completed">
+        <div class="case-card__level-badge">
+          <span class="case-card__level-num">01</span>
+          <span class="case-card__level-label">MISSION</span>
+        </div>
+        <div class="case-card__progress-ring">
+          <svg viewBox="0 0 100 100">
+            <circle class="case-card__progress-bg" cx="50" cy="50" r="45"/>
+            <circle class="case-card__progress-fill" cx="50" cy="50" r="45" data-progress="100"/>
+          </svg>
+          <span class="case-card__progress-text">100%</span>
+        </div>
+        <div class="case-card__thumb">
+          <div class="case-card__thumb-overlay"></div>
+          <div class="case-card__thumb-bg" style="background: linear-gradient(135deg, #1a0533 0%, #0d1b3e 50%, #1a0533 100%);"></div>
+          <div class="case-card__play-btn">
+            <span>📚</span>
+          </div>
+        </div>
+        <div class="case-card__info">
+          <span class="case-card__status-tag case-card__status-tag--complete">✓ COMPLETED</span>
+          <h3 class="case-card__title">COMPUTER TEACHER</h3>
+          <p class="case-card__desc">Braeem Tibahh Language School — Taught computer science, translated complex tech into student-friendly language, built foundational coding skills using Python, HTML/CSS & Scratch.</p>
+          <div class="case-card__meta">
+            <span class="case-card__meta-item">⬡ EDUCATION</span>
+            <span class="case-card__meta-item">◈ 2010–2016</span>
+            <span class="case-card__meta-item">★ 6 YEARS</span>
+          </div>
+        </div>
+        <div class="case-card__expand" data-case="1">
+          <span class="case-card__expand-text">UNLOCK INTEL</span>
+          <span class="case-card__expand-icon">⬡</span>
+        </div>
+        <div class="case-card__detail" id="caseDetail1">
+          <div class="case-card__detail-inner">
+            <div class="case-card__detail-header">
+              <h4>MISSION DEBRIEF — COMPUTER TEACHER</h4>
+              <button class="case-card__detail-close" data-close="1">✕</button>
+            </div>
+            <div class="case-card__detail-body">
+              <div class="case-card__detail-stats">
+                <div class="detail-stat">
+                  <span class="detail-stat__label">DURATION</span>
+                  <span class="detail-stat__value">6 YRS</span>
+                </div>
+                <div class="detail-stat">
+                  <span class="detail-stat__label">ORGANIZATION</span>
+                  <span class="detail-stat__value">BRAEEM TIBAHH</span>
+                </div>
+                <div class="detail-stat">
+                  <span class="detail-stat__label">ROLE TYPE</span>
+                  <span class="detail-stat__value">EDUCATOR</span>
+                </div>
+                <div class="detail-stat">
+                  <span class="detail-stat__label">SECTOR</span>
+                  <span class="detail-stat__value">EDUCATION</span>
+                </div>
+              </div>
+              <div class="case-card__detail-text">
+                <h5>THE MISSION</h5>
+                <p>Deliver comprehensive computer science education across multiple grade levels, making technology accessible and engaging for students of all ages.</p>
+                <h5>KEY CONTRIBUTIONS</h5>
+                <p>Developed curriculum covering Python, HTML/CSS, and Scratch programming. Translated complex technical concepts into simple, student-friendly language. Built a generation of tech-literate students with hands-on coding experience.</p>
+                <h5>SKILLS DEVELOPED</h5>
+                <p>Communication mastery, curriculum design, patience under pressure, and the ability to adapt teaching methods to different learning styles. This role built the foundation for all future leadership positions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="services">
-        <div class="service">
-          <div class="service__icon"><i class="fas fa-network-wired"></i></div>
-          <h3 class="service__title">Networking</h3>
-          <p class="service__desc">Strong knowledge of TCP/IP, routing, switching, and network infrastructure design and troubleshooting.</p>
+
+      <!-- Mission 2: IT Supervisor -->
+      <div class="case-card" data-level="2" data-status="completed">
+        <div class="case-card__level-badge">
+          <span class="case-card__level-num">02</span>
+          <span class="case-card__level-label">MISSION</span>
         </div>
-        <div class="service">
-          <div class="service__icon"><i class="fas fa-server"></i></div>
-          <h3 class="service__title">Systems Administration</h3>
-          <p class="service__desc">Deep expertise in Windows Server, Linux, virtualization, and enterprise system management.</p>
+        <div class="case-card__progress-ring">
+          <svg viewBox="0 0 100 100">
+            <circle class="case-card__progress-bg" cx="50" cy="50" r="45"/>
+            <circle class="case-card__progress-fill" cx="50" cy="50" r="45" data-progress="100"/>
+          </svg>
+          <span class="case-card__progress-text">100%</span>
         </div>
-        <div class="service">
-          <div class="service__icon"><i class="fas fa-shield-alt"></i></div>
-          <h3 class="service__title">IT Security</h3>
-          <p class="service__desc">Firewall administration, security best practices, and protecting organizational infrastructure.</p>
+        <div class="case-card__thumb">
+          <div class="case-card__thumb-overlay"></div>
+          <div class="case-card__thumb-bg" style="background: linear-gradient(135deg, #0d1b3e 0%, #1a0533 50%, #0a2a4a 100%);"></div>
+          <div class="case-card__play-btn">
+            <span>🖥️</span>
+          </div>
         </div>
-        <div class="service">
-          <div class="service__icon"><i class="fas fa-users-cog"></i></div>
-          <h3 class="service__title">IT Leadership</h3>
-          <p class="service__desc">Managing teams, strategic technology planning, vendor management, and departmental operations.</p>
+        <div class="case-card__info">
+          <span class="case-card__status-tag case-card__status-tag--complete">✓ COMPLETED</span>
+          <h3 class="case-card__title">IT SUPERVISOR</h3>
+          <p class="case-card__desc">EAAC Group for Training & Consultancy — Managed a technical team, oversaw network infrastructure, and handled high-pressure system failures with calm precision.</p>
+          <div class="case-card__meta">
+            <span class="case-card__meta-item">⬡ MANAGEMENT</span>
+            <span class="case-card__meta-item">◈ 2016–2019</span>
+            <span class="case-card__meta-item">★ 3 YEARS</span>
+          </div>
+        </div>
+        <div class="case-card__expand" data-case="2">
+          <span class="case-card__expand-text">UNLOCK INTEL</span>
+          <span class="case-card__expand-icon">⬡</span>
+        </div>
+        <div class="case-card__detail" id="caseDetail2">
+          <div class="case-card__detail-inner">
+            <div class="case-card__detail-header">
+              <h4>MISSION DEBRIEF — IT SUPERVISOR</h4>
+              <button class="case-card__detail-close" data-close="2">✕</button>
+            </div>
+            <div class="case-card__detail-body">
+              <div class="case-card__detail-stats">
+                <div class="detail-stat">
+                  <span class="detail-stat__label">DURATION</span>
+                  <span class="detail-stat__value">3 YRS</span>
+                </div>
+                <div class="detail-stat">
+                  <span class="detail-stat__label">ORGANIZATION</span>
+                  <span class="detail-stat__value">EAAC GROUP</span>
+                </div>
+                <div class="detail-stat">
+                  <span class="detail-stat__label">ROLE TYPE</span>
+                  <span class="detail-stat__value">SUPERVISOR</span>
+                </div>
+                <div class="detail-stat">
+                  <span class="detail-stat__label">SECTOR</span>
+                  <span class="detail-stat__value">TRAINING</span>
+                </div>
+              </div>
+              <div class="case-card__detail-text">
+                <h5>THE MISSION</h5>
+                <p>Step up from individual contributor to team leader. Manage a small IT team while maintaining hands-on technical involvement in network and systems administration.</p>
+                <h5>KEY CONTRIBUTIONS</h5>
+                <p>Mentored junior technicians, implemented network infrastructure improvements, managed help desk operations, and maintained system uptime under high-demand conditions. Handled critical system failures with calm, methodical troubleshooting.</p>
+                <h5>THE OUTCOME</h5>
+                <p>Proved leadership capabilities in a fast-paced training and consultancy environment. Developed the management skills and strategic thinking required for the next career level.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mission 3: Deputy IT Director -->
+      <div class="case-card" data-level="3" data-status="completed">
+        <div class="case-card__level-badge">
+          <span class="case-card__level-num">03</span>
+          <span class="case-card__level-label">MISSION</span>
+        </div>
+        <div class="case-card__progress-ring">
+          <svg viewBox="0 0 100 100">
+            <circle class="case-card__progress-bg" cx="50" cy="50" r="45"/>
+            <circle class="case-card__progress-fill" cx="50" cy="50" r="45" data-progress="100"/>
+          </svg>
+          <span class="case-card__progress-text">100%</span>
+        </div>
+        <div class="case-card__thumb">
+          <div class="case-card__thumb-overlay"></div>
+          <div class="case-card__thumb-bg" style="background: linear-gradient(135deg, #1a0533 0%, #0a2a4a 50%, #1a0533 100%);"></div>
+          <div class="case-card__play-btn">
+            <span>🏛️</span>
+          </div>
+        </div>
+        <div class="case-card__info">
+          <span class="case-card__status-tag case-card__status-tag--complete">✓ COMPLETED</span>
+          <h3 class="case-card__title">DEPUTY IT DIRECTOR</h3>
+          <p class="case-card__desc">King Mariot Higher Institute — Led the entire IT department operations, strategic technology planning, infrastructure management, and team development.</p>
+          <div class="case-card__meta">
+            <span class="case-card__meta-item">⬡ LEADERSHIP</span>
+            <span class="case-card__meta-item">◈ 2019–2025</span>
+            <span class="case-card__meta-item">★ 6 YEARS</span>
+          </div>
+        </div>
+        <div class="case-card__expand" data-case="3">
+          <span class="case-card__expand-text">UNLOCK INTEL</span>
+          <span class="case-card__expand-icon">⬡</span>
+        </div>
+        <div class="case-card__detail" id="caseDetail3">
+          <div class="case-card__detail-inner">
+            <div class="case-card__detail-header">
+              <h4>MISSION DEBRIEF — DEPUTY IT DIRECTOR</h4>
+              <button class="case-card__detail-close" data-close="3">✕</button>
+            </div>
+            <div class="case-card__detail-body">
+              <div class="case-card__detail-stats">
+                <div class="detail-stat">
+                  <span class="detail-stat__label">DURATION</span>
+                  <span class="detail-stat__value">6 YRS</span>
+                </div>
+                <div class="detail-stat">
+                  <span class="detail-stat__label">ORGANIZATION</span>
+                  <span class="detail-stat__value">KING MARIOT</span>
+                </div>
+                <div class="detail-stat">
+                  <span class="detail-stat__label">ROLE TYPE</span>
+                  <span class="detail-stat__value">DIRECTOR</span>
+                </div>
+                <div class="detail-stat">
+                  <span class="detail-stat__label">SECTOR</span>
+                  <span class="detail-stat__value">HIGHER ED</span>
+                </div>
+              </div>
+              <div class="case-card__detail-text">
+                <h5>THE MISSION</h5>
+                <p>Manage the full operations of the Information Technology Department at a higher education institute. Oversee infrastructure, security, team performance, and long-term technology strategy.</p>
+                <h5>KEY CONTRIBUTIONS</h5>
+                <p>Directed IT department operations including network administration, server management, firewall security, and help desk services. Planned technology upgrades 1–2 years ahead. Mentored and developed IT staff. Ensured maximum system uptime and data security across the institution.</p>
+                <h5>THE OUTCOME</h5>
+                <p>Established a reliable, scalable IT infrastructure supporting the institute's academic and administrative operations. Built a high-performing IT team and implemented strategic technology improvements that modernized the institution's digital capabilities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mission 4 - Next Chapter -->
+      <div class="case-card case-card--locked" data-level="4" data-status="in-progress">
+        <div class="case-card__level-badge">
+          <span class="case-card__level-num">04</span>
+          <span class="case-card__level-label">MISSION</span>
+        </div>
+        <div class="case-card__progress-ring">
+          <svg viewBox="0 0 100 100">
+            <circle class="case-card__progress-bg" cx="50" cy="50" r="45"/>
+            <circle class="case-card__progress-fill case-card__progress-fill--active" cx="50" cy="50" r="45" data-progress="35"/>
+          </svg>
+          <span class="case-card__progress-text">35%</span>
+        </div>
+        <div class="case-card__thumb">
+          <div class="case-card__thumb-overlay case-card__thumb-overlay--active"></div>
+          <div class="case-card__thumb-bg" style="background: linear-gradient(135deg, #0a0a2e 0%, #1a0533 50%, #0d1b3e 100%);"></div>
+          <div class="case-card__play-btn case-card__play-btn--locked">
+            <span>◆</span>
+          </div>
+        </div>
+        <div class="case-card__info">
+          <span class="case-card__status-tag case-card__status-tag--active">◆ IN PROGRESS</span>
+          <h3 class="case-card__title">NEXT CHAPTER</h3>
+          <p class="case-card__desc">The next evolution in my career. Seeking new challenges in IT leadership, cloud architecture, or enterprise systems management. Ready for deployment.</p>
+          <div class="case-card__meta">
+            <span class="case-card__meta-item">⬡ IT DIRECTOR</span>
+            <span class="case-card__meta-item">◈ 2025+</span>
+            <span class="case-card__meta-item">★ LOADING</span>
+          </div>
+        </div>
+        <div class="case-card__expand case-card__expand--locked">
+          <span class="case-card__expand-text">CLASSIFIED — AWAITING DEPLOYMENT</span>
+          <span class="case-card__expand-icon">🔒</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats" id="stats">
+    <div class="section-header">
+      <span class="section-header__tag">// 03</span>
+      <h2 class="section-header__title">CAREER <span class="accent">TELEMETRY</span></h2>
+      <div class="section-header__line"></div>
+    </div>
+    <div class="stats__grid">
+      <div class="stat-card">
+        <div class="stat-card__icon">💼</div>
+        <div class="stat-card__value" data-count="15">0</div>
+        <div class="stat-card__label">YEARS EXPERIENCE</div>
+        <div class="stat-card__bar"><div class="stat-card__bar-fill" data-width="94"></div></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__icon">🏆</div>
+        <div class="stat-card__value" data-count="8">0</div>
+        <div class="stat-card__label">CERTIFICATIONS EARNED</div>
+        <div class="stat-card__bar"><div class="stat-card__bar-fill" data-width="88"></div></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__icon">👥</div>
+        <div class="stat-card__value" data-count="4">0</div>
+        <div class="stat-card__label">LEADERSHIP ROLES</div>
+        <div class="stat-card__bar"><div class="stat-card__bar-fill" data-width="80"></div></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__icon">🖥️</div>
+        <div class="stat-card__value" data-count="3">0</div>
+        <div class="stat-card__label">ORGANIZATIONS SERVED</div>
+        <div class="stat-card__bar"><div class="stat-card__bar-fill" data-width="75"></div></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__icon">🔧</div>
+        <div class="stat-card__value" data-count="12">0</div>
+        <div class="stat-card__label">TECHNOLOGIES MASTERED</div>
+        <div class="stat-card__bar"><div class="stat-card__bar-fill" data-width="92"></div></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__icon">🌐</div>
+        <div class="stat-card__value" data-count="3">0</div>
+        <div class="stat-card__label">OS PLATFORMS (WIN/MAC/LINUX)</div>
+        <div class="stat-card__bar"><div class="stat-card__bar-fill" data-width="98"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="certifications" id="certifications">
+    <div class="section-header">
+      <span class="section-header__tag">// 04</span>
+      <h2 class="section-header__title">CERT <span class="accent">ARCHIVE</span></h2>
+      <div class="section-header__line"></div>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-card__icon">🛡️</div>
+        <div class="cert-card__body">
+          <h4 class="cert-card__title">CCNA — ROUTING & SWITCHING</h4>
+          <p class="cert-card__issuer">New Horizons Training Center</p>
+        </div>
+        <div class="cert-card__badge">CISCO</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-card__icon">🖥️</div>
+        <div class="cert-card__body">
+          <h4 class="cert-card__title">MCITP & MCSA SERVER</h4>
+          <p class="cert-card__issuer">Self Study — Microsoft Certified</p>
+        </div>
+        <div class="cert-card__badge">MICROSOFT</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-card__icon">🎓</div>
+        <div class="cert-card__body">
+          <h4 class="cert-card__title">PROFESSIONAL TEACHER LEADER</h4>
+          <p class="cert-card__issuer">Canadian Academy</p>
+        </div>
+        <div class="cert-card__badge">LEADERSHIP</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-card__icon">💻</div>
+        <div class="cert-card__body">
+          <h4 class="cert-card__title">FRONT-END DEVELOPER</h4>
+          <p class="cert-card__issuer">Root Academy</p>
+        </div>
+        <div class="cert-card__badge">DEV</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-card__icon">🎨</div>
+        <div class="cert-card__body">
+          <h4 class="cert-card__title">VISUAL DESIGN</h4>
+          <p class="cert-card__issuer">Professional Certification</p>
+        </div>
+        <div class="cert-card__badge">DESIGN</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-card__icon">🤖</div>
+        <div class="cert-card__body">
+          <h4 class="cert-card__title">AI TOOLS</h4>
+          <p class="cert-card__issuer">Professional Certification</p>
+        </div>
+        <div class="cert-card__badge">AI</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-card__icon">🔥</div>
+        <div class="cert-card__body">
+          <h4 class="cert-card__title">FIREWALL & HELP DESK</h4>
+          <p class="cert-card__issuer">Professional Certification</p>
+        </div>
+        <div class="cert-card__badge">SECURITY</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-card__icon">🌐</div>
+        <div class="cert-card__body">
+          <h4 class="cert-card__title">NETWORK ADMINISTRATOR</h4>
+          <p class="cert-card__issuer">Professional Certification</p>
+        </div>
+        <div class="cert-card__badge">NETWORK</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="timeline" id="timeline">
+    <div class="section-header">
+      <span class="section-header__tag">// 05</span>
+      <h2 class="section-header__title">MISSION <span class="accent">TIMELINE</span></h2>
+      <div class="section-header__line"></div>
+    </div>
+    <div class="timeline__track">
+      <div class="timeline__line"></div>
+      <div class="timeline__item" data-year="2005">
+        <div class="timeline__node"></div>
+        <div class="timeline__content">
+          <span class="timeline__year">2005 — 2009</span>
+          <h4 class="timeline__title">EDUCATION → FACULTY OF COMPUTERS, INFORMATION & AI</h4>
+          <p class="timeline__desc">Earned degree in Computer Science. Built the theoretical and practical foundations in programming, networking, and systems architecture.</p>
+        </div>
+      </div>
+      <div class="timeline__item" data-year="2010">
+        <div class="timeline__node"></div>
+        <div class="timeline__content">
+          <span class="timeline__year">2010 — 2016</span>
+          <h4 class="timeline__title">COMPUTER TEACHER → BRAEEM TIBAHH LANGUAGE SCHOOL</h4>
+          <p class="timeline__desc">Taught computer science across multiple levels. Developed curriculum in Python, HTML/CSS, and Scratch. Mastered the art of clear technical communication.</p>
+        </div>
+      </div>
+      <div class="timeline__item" data-year="2016">
+        <div class="timeline__node"></div>
+        <div class="timeline__content">
+          <span class="timeline__year">2016 — 2019</span>
+          <h4 class="timeline__title">IT SUPERVISOR → EAAC GROUP FOR TRAINING & CONSULTANCY</h4>
+          <p class="timeline__desc">Promoted to team leadership. Managed IT operations, mentored junior technicians, and handled critical infrastructure under pressure.</p>
+        </div>
+      </div>
+      <div class="timeline__item timeline__item--current" data-year="2019">
+        <div class="timeline__node timeline__node--active"></div>
+        <div class="timeline__content">
+          <span class="timeline__year">2019 — 2025</span>
+          <h4 class="timeline__title">DEPUTY IT DIRECTOR → KING MARIOT HIGHER INSTITUTE</h4>
+          <p class="timeline__desc">Leading the IT department operations. Managing network infrastructure, server systems, security, and strategic technology planning for the entire institution.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="section section--dark" id="contact">
-    <div class="container">
-      <div class="section__head">
-        <p class="section__tag">Contact</p>
-        <h2 class="section__title">Let's Connect</h2>
-      </div>
-      <div class="contact">
-        <form class="contact__form" id="contactForm">
-          <div class="contact__row">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
+  <!-- Contact / Uplink -->
+  <section class="contact" id="contact">
+    <div class="section-header">
+      <span class="section-header__tag">// 06</span>
+      <h2 class="section-header__title">OPEN <span class="accent">UPLINK</span></h2>
+      <div class="section-header__line"></div>
+    </div>
+    <div class="contact__content">
+      <div class="contact__terminal">
+        <div class="contact__terminal-header">
+          <span class="contact__terminal-dot contact__terminal-dot--red"></span>
+          <span class="contact__terminal-dot contact__terminal-dot--yellow"></span>
+          <span class="contact__terminal-dot contact__terminal-dot--green"></span>
+          <span class="contact__terminal-title">UPLINK_TERMINAL v3.7.1</span>
+        </div>
+        <div class="contact__terminal-body">
+          <div class="contact__terminal-line">
+            <span class="contact__terminal-prompt">&gt;</span>
+            <span class="contact__terminal-text">ESTABLISHING SECURE CONNECTION...</span>
           </div>
-          <input type="text" placeholder="Subject">
-          <textarea rows="5" placeholder="Your message..." required></textarea>
-          <button type="submit" class="btn btn--primary btn--lg">Send Message <i class="fas fa-paper-plane"></i></button>
-        </form>
-        <div class="contact__info">
-          <div class="contact__item">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <strong>Email</strong>
-              <a href="mailto:mahmoudazmy2050@gmail.com">mahmoudazmy2050@gmail.com</a>
-            </div>
+          <div class="contact__terminal-line">
+            <span class="contact__terminal-prompt">&gt;</span>
+            <span class="contact__terminal-text">OPERATIVE: MAHMOUD AZMY — STATUS: AVAILABLE</span>
           </div>
-          <div class="contact__item">
-            <i class="fas fa-phone"></i>
-            <div>
-              <strong>Phone</strong>
-              <a href="tel:+201274316731">0127-431-6731</a>
-            </div>
-          </div>
-          <div class="contact__item">
-            <i class="fas fa-map-marker-alt"></i>
-            <div>
-              <strong>Address</strong>
-              <span>Alexandria – Abo-Kir, Tosson</span>
-            </div>
-          </div>
-          <div class="contact__social">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="mailto:mahmoudazmy2050@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <div class="contact__terminal-line">
+            <span class="contact__terminal-prompt">&gt;</span>
+            <span class="contact__terminal-text">READY FOR TRANSMISSION_</span>
           </div>
         </div>
       </div>
+      <div class="contact__info-cards">
+        <div class="contact__info-card">
+          <span class="contact__info-icon">📞</span>
+          <span class="contact__info-label">PHONE</span>
+          <span class="contact__info-value">0127-431-****</span>
+        </div>
+        <div class="contact__info-card">
+          <span class="contact__info-icon">📧</span>
+          <span class="contact__info-label">EMAIL</span>
+          <span class="contact__info-value">mahmoudazmy2050@gmail.com</span>
+        </div>
+        <div class="contact__info-card">
+          <span class="contact__info-icon">📍</span>
+          <span class="contact__info-label">LOCATION</span>
+          <span class="contact__info-value">Alexandria — Abo Kir, Tosson</span>
+        </div>
+        <div class="contact__info-card">
+          <span class="contact__info-icon">🌐</span>
+          <span class="contact__info-label">LANGUAGE</span>
+          <span class="contact__info-value">English — V.Good (Written & Spoken)</span>
+        </div>
+      </div>
+      <form class="contact__form" id="contactForm">
+        <div class="contact__form-group">
+          <label class="contact__label" for="contactName">CALLSIGN</label>
+          <input class="contact__input" type="text" id="contactName" placeholder="Enter your name..." required />
+        </div>
+        <div class="contact__form-group">
+          <label class="contact__label" for="contactEmail">FREQUENCY</label>
+          <input class="contact__input" type="email" id="contactEmail" placeholder="Enter your email..." required />
+        </div>
+        <div class="contact__form-group">
+          <label class="contact__label" for="contactSubject">SUBJECT LINE</label>
+          <input class="contact__input" type="text" id="contactSubject" placeholder="Mission briefing subject..." />
+        </div>
+        <div class="contact__form-group">
+          <label class="contact__label" for="contactMessage">TRANSMISSION</label>
+          <textarea class="contact__textarea" id="contactMessage" rows="5" placeholder="Type your message..." required></textarea>
+        </div>
+        <button class="btn btn--primary btn--full" type="submit">
+          <span class="btn__icon">◆</span>
+          <span class="btn__text">TRANSMIT MESSAGE</span>
+          <span class="btn__glow"></span>
+        </button>
+      </form>
+      <div class="contact__channels">
+        <a href="mailto:mahmoudazmy2050@gmail.com" class="contact__channel" id="channelEmail">
+          <span class="contact__channel-icon">✉</span>
+          <span class="contact__channel-name">EMAIL</span>
+        </a>
+        <a href="#" class="contact__channel" id="channelLinkedIn">
+          <span class="contact__channel-icon">in</span>
+          <span class="contact__channel-name">LINKEDIN</span>
+        </a>
+        <a href="#" class="contact__channel" id="channelGitHub">
+          <span class="contact__channel-icon">GH</span>
+          <span class="contact__channel-name">GITHUB</span>
+        </a>
+        <a href="tel:0127431" class="contact__channel" id="channelPhone">
+          <span class="contact__channel-icon">📱</span>
+          <span class="contact__channel-name">PHONE</span>
+        </a>
+      </div>
     </div>
   </section>
-
-  <!-- Back to Top -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Mahmoud Azmy. All rights reserved.</p>
+    <div class="footer__content">
+      <div class="footer__left">
+        <span class="footer__logo">◆ MAHMOUD<span class="accent">AZMY</span></span>
+        <span class="footer__copy">© 2025 — ALL SYSTEMS OPERATIONAL</span>
+      </div>
+      <div class="footer__right">
+        <span class="footer__coords">ALEXANDRIA, EGYPT — ABO KIR, TOSSON</span>
+        <span class="footer__signal">SIGNAL STRENGTH: ████████░░ 82%</span>
+      </div>
     </div>
   </footer>
 
